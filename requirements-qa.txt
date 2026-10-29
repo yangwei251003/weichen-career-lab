@@ -1,0 +1,3 @@
+# Only for isolated browser verification; the applications have no runtime dependencies.
+playwright==1.58.0
+Pillow==11.0.0

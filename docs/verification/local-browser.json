@@ -1,0 +1,59 @@
+{
+  "started": "2026-10-29T17:04:21.625866+00:00",
+  "sourceSha256": "734686f054c567723519f1213002421de297f12cd493e492a5f32392ffa55b9a",
+  "suites": [
+    {
+      "script": "g1_browser.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "g2_browser.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "g3_browser.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "g4_browser.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "g5_browser.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "g6_browser.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "g7_browser.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "g8_browser.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "shared_backup.py",
+      "result": "PASS",
+      "returncode": 0
+    },
+    {
+      "script": "browser_acceptance.py",
+      "result": "PASS",
+      "returncode": 0
+    }
+  ],
+  "result": "PASS",
+  "base": "http://127.0.0.1:28363/",
+  "finished": "2026-10-29T17:05:50.309558+00:00"
+}

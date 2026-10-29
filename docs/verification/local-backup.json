@@ -1,0 +1,13 @@
+{
+  "result": "PASS",
+  "at": "2026-10-29T17:05:24.446859+00:00",
+  "checks": [
+    "saved record export",
+    "two-window stale save rejected with draft retained",
+    "wrong-project import rejected without change",
+    "preview does not mutate",
+    "confirmed restore reproduces original data and advances revision",
+    "pre-restore snapshot downloadable",
+    "full archive extraction roundtrip"
+  ]
+}

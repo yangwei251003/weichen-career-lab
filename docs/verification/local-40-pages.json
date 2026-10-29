@@ -1,0 +1,453 @@
+{
+  "base": "http://127.0.0.1:28363/",
+  "at": "2026-10-29T17:05:24.948101+00:00",
+  "projects": [
+    {
+      "id": "10",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "11",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "12",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "13",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "14",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "15",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "16",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "17",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "18",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "19",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "20",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "21",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "22",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "23",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "24",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "25",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "26",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "27",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "28",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "29",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "30",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "31",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "32",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "33",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "34",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "35",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "36",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "37",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "38",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "39",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "40",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "01",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "02",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "03",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "04",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "05",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "06",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "07",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "08",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    },
+    {
+      "id": "09",
+      "result": "PASS",
+      "scope": [
+        "render",
+        "unique label targets",
+        "desktop/mobile overflow",
+        "JSON export",
+        "preview cancel does not mutate"
+      ]
+    }
+  ],
+  "checks": [
+    "40-project navigation, search and empty state",
+    "all-project archive export and nonmutating preview"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "result": "PASS"
+}

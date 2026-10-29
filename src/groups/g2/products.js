@@ -1,0 +1,34 @@
+import {controller,esc,field,button,badge,table,stat,empty,select,submit,formValues,uid,sourceLink,reportDownload} from './shared.js';
+import {productSeed,validateProducts,compareParameters,productReport,scenarios,requireText,httpUrl} from './logic.js';
+export function mountProducts(root,ctx){
+  const c=controller(root,ctx,productSeed,validateProducts);let editProduct='',editParam='';
+  c.render=()=>{const d=c.get(),p=d.products.find(x=>x.id===editProduct)||{},v=d.params.find(x=>x.id===editParam)||{},names=[...new Set(d.params.map(x=>x.name))];
+    root.innerHTML=`<div class="notice">为你的无人机产品讲解准备：先比较证据与条件，再讨论客户场景。初始数据是公开官网摘录，不能直接替代正式选型。</div>
+    <div class="stats">${stat('产品档案',d.products.length,'保留型号与资料版本')}${stat('参数记录',d.params.length,'每项独立来源与测试条件')}${stat('资料修订',`R${d.revision}`,'修改后旧比较自动提示复查')}</div>
+    <section class="panel"><div class="panel-head"><h2>场景与比较</h2>${button('导出当前比较','export','secondary')}</div>
+    <form data-form="scene" class="form-grid">${select('scenario','客户场景',d.scenario,Object.keys(scenarios))}${field('constraints','客户约束与待核问题',d.constraints,{type:'textarea',wide:true})}${submit('更新场景')}</form>
+    <p class="muted">${esc(scenarios[d.scenario]||'先补充场景需要，再核对参数。')}</p>
+    <div class="wide-table">${table(['参数',...d.products.map(x=>x.name),'可比较性'],names.map(name=>{const vals=d.products.map(p=>d.params.find(x=>x.productId===p.id&&x.name===name));return [esc(name),...vals.map(x=>x?`<div class="comparison-cell"><strong>${esc(x.value)} <small>${esc(x.unit)}</small></strong>${esc(x.condition)}<small>${sourceLink(x.source)} · ${x.reviewed?'摘录已复核':'待复核'}</small>${button('编辑此参数',`param:${x.id}`,'secondary')}</div>`:'资料缺失',),esc(vals.length===2?compareParameters(...vals).reason:'按型号逐项核对；不自动生成总体排名')];}))}</div>
+    <div class="toolbar">${button('保存比较快照','snapshot')}${button('给材料检查器导出来源包','source-pack','secondary')}</div></section>
+    <div class="grid-2"><section class="panel"><h2>${editProduct?'编辑产品资料':'产品与资料版本'}</h2><form data-form="product" class="form-grid">${field('name','产品名称',p.name||'',{required:true})}${field('model','适用型号与配置',p.model||'',{required:true})}${field('version','手册/网页版本',p.version||'')}${field('source','官方来源网址',p.source||'',{type:'url',required:true})}${field('published','资料发布日期（未知留空）',p.published||'',{type:'date'})}${field('checked','本次核对日期',p.checked||'',{type:'date'})}${field('validUntil','有效截止日（未知留空）',p.validUntil||'',{type:'date'})}${field('note','范围与限制',p.note||'',{type:'textarea',wide:true})}${submit(editProduct?'保存产品修订':'添加产品')}${editProduct?button('取消编辑','cancel-product','secondary'):''}</form>
+    <div class="record-list">${d.products.map(p=>`<article class="record-card"><h3>${esc(p.name)}</h3><p>${esc(p.model)}</p><p class="small muted">${esc(p.version)}；发布${esc(p.published||'未注明')}；复核${esc(p.checked||'未填')}；有效期${esc(p.validUntil||'未知')}</p><p>${esc(p.note)}</p><div class="toolbar">${sourceLink(p.source)}${button('修订',`product:${p.id}`,'secondary')}${button('删除',`remove-product:${p.id}`,'danger')}</div></article>`).join('')}</div></section>
+    <section class="panel"><h2>${editParam?'编辑参数':'补充参数'}</h2><form data-form="param" class="form-grid">${select('productId','所属产品',v.productId||d.products[0]?.id||'',d.products.map(p=>({value:p.id,label:p.name})))}${field('name','参数名',v.name||'',{required:true})}${field('value','值（允许范围/文字）',v.value||'',{required:true})}${field('unit','单位',v.unit||'',{required:true})}${field('condition','测试条件/限制',v.condition||'',{type:'textarea',required:true,wide:true})}${field('source','本项原始来源',v.source||'',{type:'url',required:true,wide:true})}${select('reviewed','摘录人工核对',v.reviewed?'yes':'no',[{value:'no',label:'待复核'},{value:'yes',label:'已按原文核对'}])}${submit(editParam?'保存参数修订':'添加参数')}${editParam?button('取消编辑','cancel-param','secondary')+button('删除参数',`remove-param:${editParam}`,'danger'):''}</form><p class="small muted">相同参数名形成一行。单位、测试条件未一致时只并列展示。未知参数填“未公开”，不要猜测。</p></section></div>
+    <section class="panel"><h2>已保存的比较</h2>${d.reports.length?d.reports.slice().reverse().map(r=>`<details class="snapshot"><summary>${esc(r.createdAt)} · R${r.revision} ${r.revision===d.revision?'当前资料':'资料已变更，须重新比较'}</summary><pre class="code-output">${esc(r.text)}</pre>${button('下载这份快照',`report:${r.id}`,'secondary')}</details>`).join(''):empty('保存一份快照，之后修订来源时就能发现受影响的比较。')}</section>`;
+  };
+  c.on('submit',e=>{e.preventDefault();const f=e.target;if(!f.reportValidity())return;const x=formValues(f),kind=f.dataset.form;
+    if(kind==='scene')c.change(d=>{d.scenario=x.scenario;d.constraints=x.constraints;});
+    if(kind==='product'){if(!httpUrl(x.source))throw new Error('请填写完整的http(s)来源网址');c.change(d=>{const value={id:editProduct||uid(),...x};const i=d.products.findIndex(p=>p.id===editProduct);i<0?d.products.push(value):d.products.splice(i,1,value);d.revision++;});editProduct='';}
+    if(kind==='param'){c.change(d=>{if(d.params.some(p=>p.productId===x.productId&&p.name.trim()===x.name.trim()&&p.id!==editParam))throw new Error('这个产品已有同名参数，请编辑原记录');const value={id:editParam||uid(),...x,name:requireText(x.name,'参数名'),reviewed:x.reviewed==='yes'};const i=d.params.findIndex(p=>p.id===editParam);i<0?d.params.push(value):d.params.splice(i,1,value);d.revision++;});editParam='';}
+    ctx.notify('已保存；旧快照保留原始内容');c.render();
+  });
+  c.on('click',e=>{const act=e.target.closest('[data-action]')?.dataset.action;if(!act)return;const [action,id]=act.split(':');
+    if(action==='export')return reportDownload(ctx,'产品参数比较',productReport(c.get()));
+    if(action==='source-pack'){const d=c.get();const sources=d.products.map((p,i)=>({id:`P${i+1}`,title:`${p.name} · ${p.version}`,url:p.source,checked:p.checked,validUntil:p.validUntil,note:p.note,verified:false}));return ctx.download('产品比较-来源包.json',JSON.stringify({format:'weichen-source-pack',version:1,sources},null,2),'application/json');}
+    if(action==='report'){const r=c.get().reports.find(x=>x.id===id);if(r)return reportDownload(ctx,'产品比较快照',r.text);}
+    if(action==='product')editProduct=id;if(action==='param')editParam=id;if(action==='cancel-product')editProduct='';if(action==='cancel-param')editParam='';
+    if(action==='snapshot'){c.change(d=>d.reports.push({id:uid(),createdAt:new Date().toISOString(),revision:d.revision,text:productReport(d)}));ctx.notify('已保存带资料修订号的比较快照');}
+    if(action==='remove-param'&&ctx.confirm('删除这条参数？已有比较快照仍会保留。')){c.change(d=>{d.params=d.params.filter(p=>p.id!==id);d.revision++;});editParam='';}
+    if(action==='remove-product'&&ctx.confirm('删除该产品及其参数？已有比较快照仍会保留。'))c.change(d=>{d.products=d.products.filter(p=>p.id!==id);d.params=d.params.filter(p=>p.productId!==id);d.revision++;});
+    c.render();if(action==='product'||action==='param')root.querySelector(`form[data-form="${action}"]`)?.scrollIntoView({block:'center',behavior:'smooth'});
+  });c.render();return c.done();
+}
