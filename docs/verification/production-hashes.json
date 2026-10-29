@@ -1,0 +1,539 @@
+{
+  "url": "https://yangwei251003.github.io/weichen-career-lab/",
+  "commit": "980cf8960bcf78f01ac139da50fa4465afbeebf7",
+  "files": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 1106,
+      "sha256": "3d4400e06275733d65587f1c75e83cbbb341ccd29e125f8fb77e70be9b3f3fce",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/main.js",
+      "status": 200,
+      "bytes": 17875,
+      "sha256": "3ccf2492b8ba7f8fc8df2db392999edda50948fab703e6ac253f6dee2aa693c2",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/style.css",
+      "status": 200,
+      "bytes": 15787,
+      "sha256": "cd881a198f00f261d57e818645cbbfd315dc7614da164ecdfed14a14bcbdfe16",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/catalog.js",
+      "status": 200,
+      "bytes": 64573,
+      "sha256": "2497896bc26a90ec3186f1bda6cbdb56259ca48a3d4fb809055238da5b3c3519",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/registry.js",
+      "status": 200,
+      "bytes": 556,
+      "sha256": "10c1e5ddc72cb204deaa44c0fb66c836aac98cdf177a407bd6d0131b43528ede",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/core.js",
+      "status": 200,
+      "bytes": 7520,
+      "sha256": "03a178b951b279938eb08006950b0b6b8fc5ba397ddb33c8c19151ef886d0618",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g2/index.js",
+      "status": 200,
+      "bytes": 632,
+      "sha256": "b32a2b0ba67c7b63b015c7fffc507e1b1624b43ba0e96c668ba8371990d49b5b",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/index.js",
+      "status": 200,
+      "bytes": 309,
+      "sha256": "b5e87aaaffee67de6202f3eff7df393d4c4f6e856bf91ebdb936d461b03fc83b",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/index.js",
+      "status": 200,
+      "bytes": 324,
+      "sha256": "e54ad2d45008276a591ae413908a3df5e527126a11ce21792d256d985692f13b",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/index.js",
+      "status": 200,
+      "bytes": 290,
+      "sha256": "5f72413f1a159454b9986dc26a27b154674435dbfdbe2695389132ce087a6d53",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g3/index.js",
+      "status": 200,
+      "bytes": 315,
+      "sha256": "ba26ce5c5ffdc66e20676d7d648a2de75aa5ebafa31176bb1dba2067584f98ed",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g6/index.js",
+      "status": 200,
+      "bytes": 621,
+      "sha256": "5b07221b83806d8e31974aae3c1b84701ebef2d5305c366a8169747be3fb15a0",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/index.js",
+      "status": 200,
+      "bytes": 275,
+      "sha256": "167620131b9f145be5594cde123bec5062bcc9bb4f638656239a02a78deea1cb",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/index.js",
+      "status": 200,
+      "bytes": 314,
+      "sha256": "050612337b293c8d9ac58b891d4615b3bcbc81c013d1ce9031f18386358f6c52",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g2/products.js",
+      "status": 200,
+      "bytes": 7976,
+      "sha256": "cb3398b4737179e3fbe2b025d8cd3814eda2d08eabf570e841f445602dcfb3cc",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g2/interview.js",
+      "status": 200,
+      "bytes": 8256,
+      "sha256": "ead2baa26f7de878f590e3d34b40b02fbd8c1286ee8f5478d5b266669ac3e64e",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g2/logic.js",
+      "status": 200,
+      "bytes": 29144,
+      "sha256": "25328533bca2c06b1b81efe15689d2c582ea542c49a865ae93bbf08aa1b32b05",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/decisions.js",
+      "status": 200,
+      "bytes": 6775,
+      "sha256": "27420a853726f86d69187c064335b39f96efb63f30ddca9688f920bbef952cc9",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/evidence.js",
+      "status": 200,
+      "bytes": 5655,
+      "sha256": "31f32bb17cbec02735ef64409187fa074bd7509bf6f171ec8c6210efa5772b58",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/practice.js",
+      "status": 200,
+      "bytes": 10144,
+      "sha256": "c4910a01f56ec468ec9613eaaeaf8996f1a04d6625ffdaf6babbc5b54c8fd0ef",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g2/crm.js",
+      "status": 200,
+      "bytes": 9538,
+      "sha256": "4155d2e0b1645a8fbb39c0ead3d43286ccd7f434e1811ae32bc4c78e83e19df5",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/jobs.js",
+      "status": 200,
+      "bytes": 6587,
+      "sha256": "97062b99eb07a113494cf354755b8f6ac84b67e6fff8c52be04b5fb2b9f6d0d0",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g2/presentation.js",
+      "status": 200,
+      "bytes": 9816,
+      "sha256": "40ae77f35157ff4977e5027170fef141464c309b9d76de0b3ab0f3128957813b",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/learning.js",
+      "status": 200,
+      "bytes": 12260,
+      "sha256": "0ea02a5d3b28f869e4d509cc0ff422d3e96092983b2a98519466e096b41a4c26",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/compare.js",
+      "status": 200,
+      "bytes": 7906,
+      "sha256": "a804b2e7a0012732dfaf938838354bd0bf989254e79f3a0c3a66ae2f1bc3a87c",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/inspection.js",
+      "status": 200,
+      "bytes": 6634,
+      "sha256": "648e164114a74785185bd91a260d031f314af1623715be2841d598696a9ab4a4",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g2/cost.js",
+      "status": 200,
+      "bytes": 9811,
+      "sha256": "768cdea259962ef965283d0114c5cf930952384cf469510d87a6081d25dcba19",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/planner.js",
+      "status": 200,
+      "bytes": 9313,
+      "sha256": "69631755b19bbe5294e1f55c14d1c473ec56f9774334557aa7588d4793b75c4d",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/evaluation.js",
+      "status": 200,
+      "bytes": 13615,
+      "sha256": "61a7867744ca2ee48b785f26975e8177d8a457b4b775f8aca2c0cf05e7faf4ee",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/nengce.js",
+      "status": 200,
+      "bytes": 15755,
+      "sha256": "a1fad0b672df2b28162104e14f992261497dfd5ab15611ec7aa3ada5c7c377c5",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/bilingual.js",
+      "status": 200,
+      "bytes": 8052,
+      "sha256": "e5919032e6d30b1a1597f545b3e15afb0f57fbbc83bd8f530bb7e18eee6b0fb1",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/english.js",
+      "status": 200,
+      "bytes": 11317,
+      "sha256": "071aae4caa29e31145cfc6d683036ce257d525af475454df17c9035f513cf58c",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/training.js",
+      "status": 200,
+      "bytes": 9839,
+      "sha256": "8d3ce8bf995620de04b26c72261541d5ed4df13beaf02ce7c3586e4dd648641f",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/regions.js",
+      "status": 200,
+      "bytes": 7316,
+      "sha256": "efefe112e2ed63c0f9f3ccb2bfb937f01a5193833959857a0f1ec6f967cd2bdb",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g3/facts.js",
+      "status": 200,
+      "bytes": 8941,
+      "sha256": "4b55b593d69f8f62c41bc1cc82d5b6b64dd9a369428a7145c3584c92fa8f537c",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g3/equipment.js",
+      "status": 200,
+      "bytes": 7713,
+      "sha256": "99a815e098e7ce2eb93e7808355901a3beb264c6c10d2c8a2870ea51c3d0807c",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g3/handoff.js",
+      "status": 200,
+      "bytes": 8150,
+      "sha256": "ee65bfa44eb6533b4dc0e3cb66612ab4f9a512e7c485dbb6a1ad34d4d51f8ae2",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g3/materials.js",
+      "status": 200,
+      "bytes": 11072,
+      "sha256": "c38c0e2989fbdd756535617cd1e40ab285f653223a0800f16803872d79b9214f",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g3/activity.js",
+      "status": 200,
+      "bytes": 10558,
+      "sha256": "f24490bfd929a217d39698e6fa01b9c06e10ceaded67e7e8932544fbe2b74c2e",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/quote.js",
+      "status": 200,
+      "bytes": 9801,
+      "sha256": "bc54284faab4491641e07f81f42072a77657b72b8f216b569618df71b8201b45",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g6/logic.js",
+      "status": 200,
+      "bytes": 19933,
+      "sha256": "70b56f7711b55d1d754c5f571f3773e464c7f1e27e039a37f95fd61c4256f073",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/running.js",
+      "status": 200,
+      "bytes": 12753,
+      "sha256": "55d881bc8c67ce23b2e1bcf82c03a8ba71651827117b3cfc35e633e89242dff1",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/game.js",
+      "status": 200,
+      "bytes": 10364,
+      "sha256": "8c70611cdb0c423795b44bdc33553cb829de3f091ee5cff189aa50b6db883c0b",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g6/relationships.js",
+      "status": 200,
+      "bytes": 12691,
+      "sha256": "fd494e1168f06fd29c941c57ef5d757ef612d263132a41099dd2391843927464",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g6/experiments.js",
+      "status": 200,
+      "bytes": 7706,
+      "sha256": "bf561c68d39e5b71e82b9c8423671cee3003c233e7f678ba7dc307dba3235260",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g6/runway.js",
+      "status": 200,
+      "bytes": 7330,
+      "sha256": "1bbdec1512e6b2f63f5ffbd848034830c9fc4417d1d6e3da9e65f1e595de7949",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/opportunities.js",
+      "status": 200,
+      "bytes": 4939,
+      "sha256": "1dcbe4d5cac9a5668fbaa3aa3c656e0b0d00a6d1ccb0bca5ece8a2ed206790a2",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/arguments.js",
+      "status": 200,
+      "bytes": 6585,
+      "sha256": "c9e910e9946cd7a9e0fed54e27d5e0a365e44d22b465ee916ed76bc26e5fba4b",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/hardware.js",
+      "status": 200,
+      "bytes": 12120,
+      "sha256": "88c04b952f9591ed50eeba3d1769d1645070dbbb14f6ac58d318d32af259762d",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/observations.js",
+      "status": 200,
+      "bytes": 4578,
+      "sha256": "e78e27418be56a3c5780d56985c86dc2b6a0a2609b3f87d42e3a3f8085860576",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/forecasts.js",
+      "status": 200,
+      "bytes": 5701,
+      "sha256": "a41db9ab57050a529623675a92d4a4528846529063c70338c107417c33d46e1b",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/content.js",
+      "status": 200,
+      "bytes": 12073,
+      "sha256": "d26fd1fc1692652d9b4ff1cd281fc6be676c1f29b470969ee187796d455c37b2",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/game.js",
+      "status": 200,
+      "bytes": 5642,
+      "sha256": "8f98094154277e04ce87d1d76828eae26bbaf56a387a8fa8f064486be1321432",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/route.js",
+      "status": 200,
+      "bytes": 10286,
+      "sha256": "8deaacb31e2d6206a3819e642e755fa244bf06071929fb891a6ceb58644cdae7",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g6/business.js",
+      "status": 200,
+      "bytes": 8794,
+      "sha256": "d13d55b3bb3524491c1c5083da7af25d333e3472ca0191318048f24686123cc7",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g2/shared.js",
+      "status": 200,
+      "bytes": 2253,
+      "sha256": "64e37a46f5df7d4d037477f6fd92356c227bd9847138acc8d8219f685525e154",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/ui.js",
+      "status": 200,
+      "bytes": 2072,
+      "sha256": "d9bb34b656091a7cbad62065ebe0dc4572eb25cf3633c6450f3c0f36f64dde1c",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/common.js",
+      "status": 200,
+      "bytes": 3470,
+      "sha256": "b718c2ab9d39b518e25d34fb5d63cf66d08979b823f2916afe266c8c48f67ff6",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/logic.js",
+      "status": 200,
+      "bytes": 10545,
+      "sha256": "db3f3e71fd0dfc273c465a4460c9a5add91161b68e92b3f323745b0b8181092e",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g1/seeds.js",
+      "status": 200,
+      "bytes": 18373,
+      "sha256": "799ca133295a905f8150c0d3d1a031c06a875c2244ad5f1ddfe346ac33895832",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/inspection-logic.js",
+      "status": 200,
+      "bytes": 3505,
+      "sha256": "c27c8b46cad81bb5a67049a33ec66b29252d38019b4056956efdd43abe265152",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/planner-logic.js",
+      "status": 200,
+      "bytes": 3922,
+      "sha256": "59406f7b72e914dc5ae200aa6e5f63d72fdc4db5fe9463814e1026742b95a11a",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/evaluation-logic.js",
+      "status": 200,
+      "bytes": 6505,
+      "sha256": "74226bea402842c996f8b337c6983210d546878bbe5f3103b09d7173088a8c67",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/ui.js",
+      "status": 200,
+      "bytes": 1546,
+      "sha256": "c2ce57a6b16a1cb992ed6cfb241468a7b5e9a0f4c9a23098e7982fc174f5afad",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g4/nengce-logic.js",
+      "status": 200,
+      "bytes": 8760,
+      "sha256": "a0c6423951e6a19674a08c95ae1b23bf04fefb13d5fad865e27e39dc88d48ddc",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/logic.js",
+      "status": 200,
+      "bytes": 12293,
+      "sha256": "03814c6f7776dcaf382c6fc30de2dad7d8c1033a33060debb33d5822c60df40e",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g5/seeds.js",
+      "status": 200,
+      "bytes": 9317,
+      "sha256": "727a0e4ce45125a1529c4d8d2c808a8232b718c89b22b20f5c7e23b90e04ac44",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g3/shared.js",
+      "status": 200,
+      "bytes": 1700,
+      "sha256": "8a5cda27a7ae19fef4a67d276e7cb4c8b5f46a61786924812c3291b331768335",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g3/logic.js",
+      "status": 200,
+      "bytes": 15404,
+      "sha256": "c6549d834be4910f07b146ff3d482c0a38fcd4d4abbc1732ef689c4164edffd6",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/seeds.js",
+      "status": 200,
+      "bytes": 6200,
+      "sha256": "369217f909dff9d6756f869b45e4799e35dc0e0bc06f775c5c25f480754e32fb",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/ui.js",
+      "status": 200,
+      "bytes": 1338,
+      "sha256": "f94cafac72b9f2bf7e0ee02663830200e571b8e55a751b8de6ce9da412ebee0b",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g8/logic.js",
+      "status": 200,
+      "bytes": 18149,
+      "sha256": "2f1d6b37990fca7b095917804380f5deb7475c740d661b4a0c046c6df2ed3741",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/seeds.js",
+      "status": 200,
+      "bytes": 7900,
+      "sha256": "9c8d1a851650a22940569163d1ad4ca857266a33c1c3870467e826a28b338185",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/ui.js",
+      "status": 200,
+      "bytes": 1606,
+      "sha256": "81df5359d8d1686dda5cb99af76cf8e7ec757851d792f18973bac1ec917e1708",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/groups/g7/logic.js",
+      "status": 200,
+      "bytes": 9435,
+      "sha256": "a4bf46aedb1d583f252eb460c7d83818526e93a4e34171427ae9aafd3648f062",
+      "matchesGitSource": true
+    },
+    {
+      "path": "src/assets/mark.svg",
+      "status": 200,
+      "bytes": 301,
+      "sha256": "61ebbf1e967470ed6202f61b57af776f3584635351f1b069fdc0949af8c660cb",
+      "matchesGitSource": true
+    }
+  ],
+  "result": "PASS"
+}

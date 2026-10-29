@@ -1,0 +1,56 @@
+{
+  "result": "PASS",
+  "date": "2026-10-29T17:32:38.889528+00:00",
+  "url": "https://yangwei251003.github.io/weichen-career-lab/",
+  "codeCommit": "980cf8960bcf78f01ac139da50fa4465afbeebf7",
+  "groups": [
+    {
+      "group": 1,
+      "result": "PASS"
+    },
+    {
+      "group": 2,
+      "result": "PASS"
+    },
+    {
+      "group": 3,
+      "result": "PASS"
+    },
+    {
+      "group": 4,
+      "result": "PASS"
+    },
+    {
+      "group": 5,
+      "result": "PASS"
+    },
+    {
+      "group": 6,
+      "result": "PASS"
+    },
+    {
+      "group": 7,
+      "result": "PASS"
+    },
+    {
+      "group": 8,
+      "result": "PASS"
+    }
+  ],
+  "pages": 40,
+  "backupChecks": 7,
+  "automaticExternalRequests": [],
+  "firstAttempt": {
+    "groups1to7": "PASS",
+    "group8": "navigation ERR_CONNECTION_CLOSED before application loaded"
+  },
+  "followup": "group8 rerun passed, followed by shared backup and all40 page acceptance; no failed business assertion skipped",
+  "g8Checks": [
+    "36: short-circuit feedback, 3 playable stages, hover condition, pre/post persistence, teaching export",
+    "37: distinct real total/example training, personal log, gated asynchronous CSV import/visible preview, finite numeric split charts, exports",
+    "38: coordinate placement, route reordering, paused stop removed from timeline, dropout reason, itinerary/SVG",
+    "39: linked fact deletion gate, human review invalidation, timed SRT, reader feedback, original draft report",
+    "40: quantity/cost sensitivity, requirement/BOM integrity, failed-task next step, real-trial gate, report/CSV",
+    "5 mobile layouts; zero JavaScript page errors"
+  ]
+}
