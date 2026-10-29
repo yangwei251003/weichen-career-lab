@@ -34,6 +34,8 @@ with sync_playwright() as p:
         assert not page.get_by_text('现有资料未覆盖。先到备份页导出资料，再排查问题。').count(),id
         dup=page.evaluate("""() => { const a=[...document.querySelectorAll('[id]')].map(x=>x.id); return a.filter((x,i)=>a.indexOf(x)!==i); }""")
         assert not dup,(id,'duplicate ids',dup)
+        bad_svg=page.locator('svg').evaluate_all("els => els.flatMap(svg => [svg,...svg.querySelectorAll('*')].flatMap(el => [...el.attributes].filter(a => /\\b(?:NaN|Infinity|undefined)\\b/.test(a.value)).map(a => el.tagName + ':' + a.name + '=' + a.value)))")
+        assert not bad_svg,(id,'invalid SVG coordinates',bad_svg)
         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth+1'),(id,'desktop overflow')
         if id in ['01','07','13','18','21','28','34','36']:
             page.screenshot(path=str(OUT/f'{id}-desktop.png'))

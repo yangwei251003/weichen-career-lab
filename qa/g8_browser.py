@@ -25,9 +25,12 @@ def run(url):
         def body(): return page.locator('#qa-root').inner_text()
         def messages(): return page.evaluate('window.qaMessages')
         def open_form(form):
+            target=page.locator(f'[data-form="{form}"]')
+            expect(target).to_be_attached()
             detail=page.locator(f'details:has([data-form="{form}"])').first
-            if detail.count() and not detail.get_attribute('open'):
+            if detail.count() and detail.get_attribute('open') is None:
                 detail.locator(':scope > summary').click()
+            expect(target).to_be_visible()
         def downloaded(action):
             with page.expect_download() as dl: page.locator(f'[data-action="{action}"]').click()
             return Path(dl.value.path()).read_text(encoding='utf-8-sig')
@@ -60,11 +63,26 @@ def run(url):
         open_form('run');fill('run','distance','6');fill('run','duration','36:00');fill('run','goal','测试：下课后能否完成');fill('run','outcome','测试：按时结束');submit('run')
         assert '测试：按时结束' in body()
         page.locator('details:has([data-file=runs]) > summary').click()
+        # Hold the native file read until after change dispatch to reproduce CI latency.
+        # This controls only the test fixture I/O; UI visibility is never forced.
+        page.evaluate("""() => {
+            window.qaOriginalFileText=File.prototype.text;
+            const pending=new Promise(resolve=>{window.qaReleaseCsvRead=resolve;});
+            File.prototype.text=async function(){
+                if(this.name==='test.csv') await pending;
+                return window.qaOriginalFileText.call(this);
+            };
+        }""")
         page.locator('[data-file=runs]').set_input_files({'name':'test.csv','mimeType':'text/csv','buffer':b'date,metres,seconds,type\n2026-10-30,1000,300,test'})
-        open_form('mapping')
+        expect(page.locator('[data-form=mapping]')).to_have_count(0)
+        page.evaluate('window.qaReleaseCsvRead()')
+        expect(page.locator('[data-form=mapping]')).to_be_visible()
+        page.evaluate('() => { File.prototype.text=window.qaOriginalFileText; }')
         select('mapping','date','date');select('mapping','distance','metres');select('mapping','duration','seconds');select('mapping','type','type')
         select('mapping','distanceUnit','m');select('mapping','timeUnit','seconds');submit('mapping')
-        open_form('mapping');assert '待导入1条' in body()
+        expect(page.locator('[data-form=mapping]')).to_be_visible()
+        expect(page.locator('[data-action=import]')).to_be_visible()
+        assert '待导入1条' in body()
         page.locator('[data-action=import]').click()
         mount('37');assert '导入待核' in body()
         fill('split','label','0—5km示例');fill('split','distance','5');fill('split','duration','20:00');select('split','kind','示例分段');submit('split')
@@ -72,10 +90,14 @@ def run(url):
         fill('split','label','0—5km本人记录测试');fill('split','distance','5');fill('split','duration','20:00');select('split','kind','本人分段记录');submit('split')
         assert '37.195 km' in body()
         assert '分段配速' in page.locator('svg').last.get_attribute('aria-label')
+        for chart in page.locator('svg').all():
+            assert 'NaN' not in chart.evaluate('(node)=>node.outerHTML')
+            expect(chart.locator('rect').first).to_have_attribute('height','145')
+            expect(chart).to_contain_text('4.0')
         csv=downloaded('csv');assert '训练记录' not in csv or '日期' in csv
         assert '测试：下课后能否完成' in csv and '导入待核' in csv
         assert '2:56:31' in downloaded('report')
-        checks.append('37: distinct real total/example training, personal log, mapped metre/second CSV import, split chart, exports')
+        checks.append('37: distinct real total/example training, personal log, gated asynchronous CSV import/visible preview, finite numeric split charts, exports')
 
         mount('38');page.locator('[data-edit=b]').click()
         before=page.locator('[data-form=point] [name=x]').input_value()
