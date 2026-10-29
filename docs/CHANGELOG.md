@@ -43,3 +43,7 @@
 - 本版本记录功能与修复范围；最终测试统计、GitHub归档和Pages在线验收由项目交付记录统一记载，不在此预填未经确认的结果。
 
 逐项入口与首试方法见[40个应用索引](40个应用索引.md)。参考来源与局部验收见`research-g1.md`至`research-g8.md`及[岗位来源核验](research-jobs.md)；有界审查过程见[集成审查](review-integration.md)。
+
+### 发布环境修复
+
+首次云端构建在ubuntu-latest解析到26.04时，Playwright1.58.0安装浏览器依赖失败。核对[该版本官方依赖定义](https://github.com/microsoft/playwright/blob/v1.58.0/packages/playwright-core/src/server/registry/nativeDeps.ts)及[GitHub镜像清单](https://github.com/actions/runner-images/blob/main/README.md)后，将构建与发布环境明确固定为ubuntu-24.04；保留完整浏览器验证步骤。
