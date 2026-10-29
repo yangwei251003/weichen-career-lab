@@ -1,6 +1,6 @@
 {
   "result": "PASS",
-  "at": "2026-10-29T17:05:24.446859+00:00",
+  "at": "2026-10-29T17:22:08.754184+00:00",
   "checks": [
     "saved record export",
     "two-window stale save rejected with draft retained",

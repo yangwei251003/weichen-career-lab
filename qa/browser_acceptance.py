@@ -1,7 +1,7 @@
 """Isolated real-browser integration checks; no user browser profile is used."""
 import json, pathlib, sys, subprocess, datetime
 from urllib.parse import urlsplit
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 BASE=sys.argv[1] if len(sys.argv)>1 else 'http://127.0.0.1:8040/'
@@ -45,9 +45,10 @@ with sync_playwright() as p:
         target=OUT/f'{id}-backup.json';backup.save_as(str(target))
         data=json.loads(target.read_text(encoding='utf-8'))
         assert data['projectId']==id
+        before=page.evaluate("localStorage.getItem('weichen-career-lab:v1')")
         page.locator('#import-file').set_input_files(str(target))
         page.locator('#import-dialog').wait_for(state='visible')
-        before=page.evaluate("localStorage.getItem('weichen-career-lab:v1')")
+        assert page.evaluate("localStorage.getItem('weichen-career-lab:v1')")==before
         page.locator('[data-action="cancel-import"]').click()
         assert page.evaluate("localStorage.getItem('weichen-career-lab:v1')")==before
         page.set_viewport_size({'width':390,'height':844})
@@ -58,8 +59,11 @@ with sync_playwright() as p:
     page.goto(BASE+'#/data')
     assert page.get_by_role('heading',name='把资料带到下一站。').count()==1
     with page.expect_download() as dl: page.locator('[data-action="all-backup"]').click()
-    dest=OUT/'all-backup.json';dl.value.save_as(str(dest));page.locator('#vault-file').set_input_files(str(dest))
-    assert '档案已读取' in page.locator('#vault-preview').inner_text()
+    dest=OUT/'all-backup.json';dl.value.save_as(str(dest))
+    archive_before=page.evaluate("localStorage.getItem('weichen-career-lab:v1')")
+    page.locator('#vault-file').set_input_files(str(dest))
+    expect(page.locator('#vault-preview')).to_contain_text('档案已读取')
+    assert page.evaluate("localStorage.getItem('weichen-career-lab:v1')")==archive_before
     report['checks'].append('all-project archive export and nonmutating preview')
     assert not report['errors'],report['errors']
     assert not report['externalRequests'],report['externalRequests']

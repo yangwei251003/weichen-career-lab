@@ -1,5 +1,5 @@
 """Exercise persistence through the actual shell controls, not a mock store."""
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 import pathlib,json,sys,datetime
 ROOT=pathlib.Path(__file__).resolve().parents[1];OUT=ROOT/'test-results'/'backups';OUT.mkdir(parents=True,exist_ok=True)
 BASE=sys.argv[1] if len(sys.argv)>1 else 'http://127.0.0.1:8040/'
@@ -12,7 +12,7 @@ with sync_playwright() as p:
     a.locator('#project-app [data-edit]').first.click();a.locator('form[data-form="evidence"] [name="boundary"]').fill('新版本已保存');a.locator('form[data-form="evidence"] [type="submit"]').click()
     second.locator('form[data-form="evidence"] [type="submit"]').click();assert '另一窗口已更新' in second.locator('#toast').inner_text();assert second.locator('form[data-form="evidence"] [name="boundary"]').input_value()=='另一个窗口未保存的输入'
     before=a.evaluate("localStorage.getItem('weichen-career-lab:v1')")
-    bad=OUT/'wrong-project.json';bad.write_text(json.dumps({**original,'projectId':'02'},ensure_ascii=False),encoding='utf-8');a.locator('#import-file').set_input_files(str(bad));assert '不匹配' in a.locator('#toast').inner_text();assert a.evaluate("localStorage.getItem('weichen-career-lab:v1')")==before
+    bad=OUT/'wrong-project.json';bad.write_text(json.dumps({**original,'projectId':'02'},ensure_ascii=False),encoding='utf-8');a.locator('#import-file').set_input_files(str(bad));expect(a.locator('#toast')).to_contain_text('不匹配');assert a.evaluate("localStorage.getItem('weichen-career-lab:v1')")==before
     a.locator('#import-file').set_input_files(str(backup));a.locator('#import-dialog').wait_for(state='visible');assert a.evaluate("localStorage.getItem('weichen-career-lab:v1')")==before
     a.locator('[data-action="apply-import"]').click();assert a.get_by_text('备份集成测试：真实贡献边界，不上传联系方式',exact=False).count()
     after=json.loads(a.evaluate("localStorage.getItem('weichen-career-lab:v1')"));assert after['projects']['01']['data']==original['data'];assert after['projects']['01']['revision']>json.loads(before)['projects']['01']['revision']

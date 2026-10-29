@@ -47,3 +47,6 @@
 ### 发布环境修复
 
 首次云端构建在ubuntu-latest解析到26.04时，Playwright1.58.0安装浏览器依赖失败。核对[该版本官方依赖定义](https://github.com/microsoft/playwright/blob/v1.58.0/packages/playwright-core/src/server/registry/nativeDeps.ts)及[GitHub镜像清单](https://github.com/actions/runner-images/blob/main/README.md)后，将构建与发布环境明确固定为ubuntu-24.04；保留完整浏览器验证步骤。
+
+- 修复37读取CSV后折叠与分段图NaN，加入延迟读取及图表数值回归；根因和验证见research-g8.md。
+- 云端八组业务通过后，最终总备份测试暴露了读取尚未完成就断言的问题；改为等待“档案已读取”的可见完成状态，并加强所有导入预览前后数据不变的断言。没有删除检查或增加盲目固定延时。
